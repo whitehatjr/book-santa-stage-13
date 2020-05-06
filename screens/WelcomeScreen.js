@@ -241,7 +241,7 @@ export default class WelcomeScreen extends Component {
               type: "font-awesome",
               size: 25,
               name: "envelope",
-              style: { paddingRight: 10 },
+              style: { paddingRight: 20 },
             }}
             placeholder="abc@example.com"
             placeholderTextColor="gray"

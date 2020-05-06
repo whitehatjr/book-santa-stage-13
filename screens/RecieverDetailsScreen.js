@@ -144,13 +144,20 @@ export default class RecieverDetailsScreen extends Component {
                 justifyContent: "center",
               }}
             >
-              <Text style={{ fontWeight: "500", fontSize: RFValue(25) }}>
+              <Text
+                style={{
+                  fontWeight: "500",
+                  fontSize: RFValue(25),
+                  textAlign: "center",
+                }}
+              >
                 {this.state.bookName}
               </Text>
               <Text
                 style={{
                   fontWeight: "400",
                   fontSize: RFValue(15),
+                  textAlign: "center",
                   marginTop: RFValue(15),
                 }}
               >
