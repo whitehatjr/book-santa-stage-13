@@ -22,6 +22,7 @@
     "react-native-google-books": "^1.0.4",
     "react-native-image-picker": "^2.3.1",
     "react-native-reanimated": "^1.7.1",
+    "react-native-responsive-fontsize": "^0.4.3",
     "react-native-safe-area-context": "^0.7.3",
     "react-native-screens": "^2.4.0",
     "react-native-swipe-list-view": "^2.5.0",
