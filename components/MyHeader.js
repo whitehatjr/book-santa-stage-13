@@ -31,7 +31,7 @@ componentDidMount(){
  BellIconWithBadge=()=>{
     return(
       <View>
-        <Icon name='bell' type='font-awesome' color='#696969' size={25}
+        <Icon name='bell' type='font-awesome' color='#ffffff' size={25}
           onPress={() =>this.props.navigation.navigate('Notification')}/>
          <Badge
           value={this.state.value}
@@ -43,10 +43,10 @@ componentDidMount(){
   render(){
     return(
         <Header
-          leftComponent={<Icon name='bars' type='font-awesome' color='#696969'  onPress={() => this.props.navigation.toggleDrawer()}/>}
-          centerComponent={{ text: this.props.title, style: { color: '#90A5A9', fontSize:20,fontWeight:"bold", } }}
+          leftComponent={<Icon name='bars' type='font-awesome' color='#ffffff'  onPress={() => this.props.navigation.toggleDrawer()}/>}
+          centerComponent={{ text: this.props.title, style: { color: '#ffffff', fontSize:20,fontWeight:"bold", } }}
           rightComponent={<this.BellIconWithBadge {...this.props}/>}
-          backgroundColor = "#eaf8fe"
+          backgroundColor = "#32867d"
         />
 
 )

@@ -27,7 +27,6 @@ export default class BookDonateScreen extends Component {
       .collection("requested_books")
       .onSnapshot((snapshot) => {
         var requestedBooksList = snapshot.docs.map((doc) => doc.data());
-        console.log("this is the requested ", requestedBooksList);
         this.setState({
           requestedBooksList: requestedBooksList,
         });
@@ -39,7 +38,7 @@ export default class BookDonateScreen extends Component {
   }
 
   componentWillUnmount() {
-    requestRef();
+  this.requestRef();
   }
 
   keyExtractor = (item, index) => index.toString();
@@ -110,7 +109,7 @@ const styles = StyleSheet.create({
     height: 30,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#ff5722",
+    backgroundColor: "#32867d",
     shadowColor: "#000",
     shadowOffset: {
       width: 0,

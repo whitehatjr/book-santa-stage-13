@@ -96,7 +96,7 @@ export default class CustomSideBarMenu extends Component {
             flex: 0.3,
             justifyContent: "center",
             alignItems: "center",
-            backgroundColor: "#ff6d00",
+            backgroundColor: "#32867d",
           }}
         >
           <Avatar

@@ -103,19 +103,19 @@ export default class RecieverDetailsScreen extends Component {
               <Icon
                 name="arrow-left"
                 type="feather"
-                color="#696969"
+                color="#ffff"
                 onPress={() => this.props.navigation.goBack()}
               />
             }
             centerComponent={{
               text: "Donate Books",
               style: {
-                color: "#90A5A9",
+                color: "#ffff",
                 fontSize: RFValue(20),
                 fontWeight: "bold",
               },
             }}
-            backgroundColor="#eaf8fe"
+            backgroundColor="#32867d"
           />
         </View>
         <View style={{ flex: 0.9 }}>

@@ -51,7 +51,7 @@ export default class BookRequestScreen extends Component {
       "AIzaSyASyOjOtJla-X-b3io2eLoaUc_bIRFSIIc"
     );
 
-    console.log("here in add request ", books.data[0].volumeInfo.imageLinks);
+
     db.collection("requested_books").add({
       user_id: userId,
       book_name: bookName,
@@ -203,7 +203,7 @@ export default class BookRequestScreen extends Component {
 
   //render Items  functionto render the books from api
   renderItem = ({ item, i }) => {
-    console.log("image link ");
+
 
     let obj = {
       title: item.volumeInfo.title,
@@ -218,7 +218,6 @@ export default class BookRequestScreen extends Component {
           alignItems: "center",
           backgroundColor: "#DDDDDD",
           padding: 10,
-
           width: "90%",
         }}
         activeOpacity={0.6}
@@ -239,7 +238,7 @@ export default class BookRequestScreen extends Component {
   render() {
     if (this.state.IsBookRequestActive === true) {
       return (
-        <View style={{ flex: 1 }}>
+        <View style={{ flex: 1}}>
           <View
             style={{
               flex: 0.1,
@@ -252,6 +251,7 @@ export default class BookRequestScreen extends Component {
               flex: 0.3,
               justifyContent: "center",
               alignItems: "center",
+              marginTop:20
             }}
           >
             <Image
@@ -273,28 +273,25 @@ export default class BookRequestScreen extends Component {
           >
             <Text
               style={{
-                textAlign: "flex-start",
-                fontSize: RFValue(25),
-                fontWeight: "bold",
+                fontSize: RFValue(20),
+
               }}
             >
               Name of the book
             </Text>
             <Text
               style={{
-                fontSize: RFValue(20),
+                fontSize: RFValue(30),
                 fontWeight: "500",
-                textAlign: "center",
                 padding: RFValue(10),
+                fontWeight: "bold",
               }}
             >
               {this.state.requestedBookName}
             </Text>
             <Text
               style={{
-                textAlign: "flex-start",
-                fontSize: RFValue(25),
-                fontWeight: "bold",
+                fontSize: RFValue(20),
                 marginTop: RFValue(30),
               }}
             >
@@ -302,7 +299,7 @@ export default class BookRequestScreen extends Component {
             </Text>
             <Text
               style={{
-                fontSize: RFValue(18),
+                fontSize: RFValue(30),
                 fontWeight: "bold",
                 marginTop: RFValue(10),
               }}
@@ -423,7 +420,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     borderRadius: RFValue(50),
-    backgroundColor: "#ff5722",
+    backgroundColor: "#32867d",
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
