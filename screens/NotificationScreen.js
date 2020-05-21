@@ -51,7 +51,7 @@ export default class NotificationScreen extends Component{
           key={index}
           leftElement={<Icon name="book" type="font-awesome" color ='#696969'/>}
           title={item.book_name}
-          titleStyle={{ color: 'black', fontWeight: 'bold' }}
+          titleStyle={styles.LiTitle}
           subtitle={item.message}
           bottomDivider
         />
@@ -62,14 +62,14 @@ export default class NotificationScreen extends Component{
   render(){
     return(
       <View style={styles.container}>
-        <View style={{flex:0.1}}>
+        <View style={{flex:0.13}}>
           <MyHeader title={"Notifications"} navigation={this.props.navigation}/>
         </View>
-        <View style={{flex:0.9}}>
+        <View style={{flex:0.8}}>
           {
             this.state.allNotifications.length === 0
             ?(
-              <View style={{flex:1, justifyContent:'center', alignItems:'center'}}>
+              <View style={styles.imageView}>
                 <Image
                 source={require('../assets/Notification.png')}/>
                 <Text style={{fontSize:25}}>You have no notifications</Text>
@@ -90,5 +90,14 @@ const styles = StyleSheet.create({
   container : {
     flex : 1,
     backgroundColor:'#deeeed'
+  },
+  imageView:{
+    flex:1,
+    justifyContent:'center',
+    alignItems:'center'
+  },
+  LiTitle:{
+    color: 'black',
+    fontWeight: 'bold'
   }
 })

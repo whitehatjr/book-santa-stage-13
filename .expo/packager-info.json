@@ -1,9 +1,10 @@
 {
   "devToolsPort": 19002,
-  "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 9550,
-  "expoServerNgrokUrl": "https://k4-uhf.rajeevtfi.book-santa-stage-13.exp.direct",
-  "packagerNgrokUrl": "https://packager.k4-uhf.rajeevtfi.book-santa-stage-13.exp.direct",
-  "ngrokPid": 9722
+  "expoServerPort": null,
+  "packagerPort": null,
+  "packagerPid": null,
+  "expoServerNgrokUrl": null,
+  "packagerNgrokUrl": null,
+  "ngrokPid": null,
+  "webpackServerPort": null
 }

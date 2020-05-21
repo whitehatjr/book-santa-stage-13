@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "book-santa-stage-7",
-    "slug": "book-santa-stage-7",
+    "name": "book-santa",
+    "slug": "book-santa",
     "platforms": [
       "ios",
       "android",
@@ -9,11 +9,11 @@
     ],
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/bookLogo.png",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/santa.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#6fc0b8"
     },
     "updates": {
       "fallbackToCacheTimeout": 0

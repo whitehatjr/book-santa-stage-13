@@ -103,14 +103,14 @@ export default class RecieverDetailsScreen extends Component {
               <Icon
                 name="arrow-left"
                 type="feather"
-                color="#ffff"
+                color="#ffffff"
                 onPress={() => this.props.navigation.goBack()}
               />
             }
             centerComponent={{
               text: "Donate Books",
               style: {
-                color: "#ffff",
+                color: "#ffffff",
                 fontSize: RFValue(20),
                 fontWeight: "bold",
               },
@@ -127,7 +127,7 @@ export default class RecieverDetailsScreen extends Component {
               paddingLeft: RFValue(10),
             }}
           >
-            <View style={{ flex: 0.4, borderWidth: 3 }}>
+            <View style={{ flex: 0.4,}}>
               <Image
                 source={{ uri: this.state.bookImage }}
                 style={{
@@ -171,7 +171,7 @@ export default class RecieverDetailsScreen extends Component {
               padding: RFValue(20),
             }}
           >
-            <View style={{ flex: 0.7 }}>
+            <View style={{ flex: 0.7 ,justifyContent:'center',alignItems:'center',marginTop:RFValue(50),borderWidth:1,borderColor:'#deeedd',padding:RFValue(10)}}>
               <Text
                 style={{
                   fontWeight: "500",

@@ -46,13 +46,13 @@ export default class MyReceivedBooksScreen extends Component{
         subtitle={item.bookStatus}
         leftElement={
           <Image
-            style={{ height:RFValue(50), width:RFValue(50) }}
+            style={styles.LiImage}
             source={{
               uri: item.image_link,
             }}
             />
           }
-        titleStyle={{ color: 'black', fontWeight: 'bold' }}
+        titleStyle={styles.titlestyle}
         bottomDivider
       />
     )
@@ -102,5 +102,15 @@ const styles = StyleSheet.create({
        width: 0,
        height: 8
      }
-  }
+  },
+  LiImage:{
+    height:RFValue(50),
+    width:RFValue(50)
+  },
+  titlestyle:
+  {
+  color: 'black',
+  fontWeight: 'bold'
+},
+
 })

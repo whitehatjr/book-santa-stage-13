@@ -214,12 +214,7 @@ export default class BookRequestScreen extends Component {
 
     return (
       <TouchableHighlight
-        style={{
-          alignItems: "center",
-          backgroundColor: "#DDDDDD",
-          padding: 10,
-          width: "90%",
-        }}
+        style={styles.touchableopacity}
         activeOpacity={0.6}
         underlayColor="#DDDDDD"
         onPress={() => {
@@ -247,29 +242,15 @@ export default class BookRequestScreen extends Component {
             <MyHeader title="Book Status" navigation={this.props.navigation} />
           </View>
           <View
-            style={{
-              flex: 0.3,
-              justifyContent: "center",
-              alignItems: "center",
-              marginTop:20
-            }}
+            style={styles.ImageView}
           >
             <Image
               source={{ uri: this.state.requestedImageLink }}
-              style={{
-                height: RFValue(150),
-                width: RFValue(150),
-                alignSelf: "center",
-                borderWidth: 5,
-                borderRadius: RFValue(10),
-              }}
+              style={styles.imageStyle}
             />
           </View>
           <View
-            style={{
-              flex: 0.4,
-              alignItems: "center",
-            }}
+            style={styles.bookstatus}
           >
             <Text
               style={{
@@ -280,39 +261,23 @@ export default class BookRequestScreen extends Component {
               Name of the book
             </Text>
             <Text
-              style={{
-                fontSize: RFValue(30),
-                fontWeight: "500",
-                padding: RFValue(10),
-                fontWeight: "bold",
-              }}
+              style={styles.requestedbookName}
             >
               {this.state.requestedBookName}
             </Text>
             <Text
-              style={{
-                fontSize: RFValue(20),
-                marginTop: RFValue(30),
-              }}
+              style={styles.status}
             >
               Status
             </Text>
             <Text
-              style={{
-                fontSize: RFValue(30),
-                fontWeight: "bold",
-                marginTop: RFValue(10),
-              }}
+              style={styles.bookStatus}
             >
               {this.state.bookStatus}
             </Text>
           </View>
           <View
-            style={{
-              flex: 0.2,
-              justifyContent: "center",
-              alignItems: "center",
-            }}
+            style={styles.buttonView}
           >
             <TouchableOpacity
               style={styles.button}
@@ -323,11 +288,7 @@ export default class BookRequestScreen extends Component {
               }}
             >
               <Text
-                style={{
-                  fontSize: RFValue(18),
-                  fontWeight: "bold",
-                  color: "#fff",
-                }}
+                style={styles.buttontxt}
               >
                 Book Recived
               </Text>
@@ -385,11 +346,7 @@ export default class BookRequestScreen extends Component {
                 }}
               >
                 <Text
-                  style={{
-                    fontSize: RFValue(20),
-                    fontWeight: "bold",
-                    color: "#fff",
-                  }}
+                  style={styles.requestbuttontxt}
                 >
                   Request
                 </Text>
@@ -413,6 +370,62 @@ const styles = StyleSheet.create({
     height: RFValue(35),
     borderWidth: 1,
     padding: 10,
+  },
+  ImageView:{
+    flex: 0.3,
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop:20
+  },
+  imageStyle:{
+    height: RFValue(150),
+    width: RFValue(150),
+    alignSelf: "center",
+    borderWidth: 5,
+    borderRadius: RFValue(10),
+  },
+  bookstatus:{
+    flex: 0.4,
+    alignItems: "center",
+
+  },
+  requestedbookName:{
+    fontSize: RFValue(30),
+    fontWeight: "500",
+    padding: RFValue(10),
+    fontWeight: "bold",
+    alignItems:'center',
+    marginLeft:RFValue(60)
+  },
+  status:{
+    fontSize: RFValue(20),
+    marginTop: RFValue(30),
+  },
+  bookStatus:{
+    fontSize: RFValue(30),
+    fontWeight: "bold",
+    marginTop: RFValue(10),
+  },
+  buttonView:{
+    flex: 0.2,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  buttontxt:{
+    fontSize: RFValue(18),
+    fontWeight: "bold",
+    color: "#fff",
+  },
+  touchableopacity:{
+    alignItems: "center",
+    backgroundColor: "#DDDDDD",
+    padding: 10,
+    width: "90%",
+  },
+  requestbuttontxt:{
+    fontSize: RFValue(20),
+    fontWeight: "bold",
+    color: "#fff",
   },
   button: {
     width: "75%",

@@ -16,7 +16,7 @@ import SantaAnimation from "../components/SantaClaus.js";
 import db from "../config";
 import firebase from "firebase";
 
-import { Input, Icon } from "react-native-elements";
+import { Icon } from "react-native-elements";
 import { RFValue } from "react-native-responsive-fontsize";
 
 export default class WelcomeScreen extends Component {
@@ -87,9 +87,9 @@ export default class WelcomeScreen extends Component {
         transparent={true}
         visible={this.state.isModalVisible}
       >
-        <ScrollView style={{flex: 1,backgroundColor: "#fff"}}>
-          <View style={{flex:0.05,justifyContent:'center',alignItems:'center'}}>
-            <Text style={{fontSize:RFValue(20),fontWeight:"bold",color:"#32867d"}}> SIGN UP </Text>
+        <ScrollView style={styles.scrollview}>
+          <View style={styles.signupView}>
+            <Text style={styles.signupText}> SIGN UP </Text>
           </View>
               <View style={{flex:0.95}}>
                   <Text style={styles.label}>First Name </Text>
@@ -212,16 +212,16 @@ export default class WelcomeScreen extends Component {
           style={{ flex: 0.25}}
         >
         <View style={{flex:0.15}}/>
-        <View style={{flex:0.85, justifyContent:"center", alignItems:"center", padding:RFValue(10)}}>
+        <View style={styles.santaView}>
           <Image
           source={require('../assets/santa.png')}
-          style={{width:"70%",height:"100%", resizeMode:"stretch"}}
+          style={styles.santaImage}
            />
          </View>
         </View>
         <View style={{ flex: 0.45 }}>
-          
-          <View style={{flex:0.5, alignItems:"center", justifyContent:"center"}}>
+
+          <View style={styles.TextInput}>
           <TextInput
             style={styles.loginBox}
             placeholder="abc@example.com"
@@ -249,8 +249,7 @@ export default class WelcomeScreen extends Component {
           <TouchableOpacity
             style={styles.button}
             onPress={() => {
-              // this.userLogin(this.state.emailId, this.state.password);
-              this.userLogin("abhi@example.com", "123456");
+              this.userLogin(this.state.emailId, this.state.password);  
             }}
           >
             <Text style={styles.buttonText}>Login</Text>
@@ -271,7 +270,7 @@ export default class WelcomeScreen extends Component {
         >
         <Image
         source={require('../assets/book.png')}
-        style={{width:"100%",height:RFValue(220)}}
+        style={styles.bookImage}
         resizeMode={"stretch"}
          />
         </View>
@@ -361,5 +360,39 @@ const styles = StyleSheet.create({
     fontWeight:'bold',
     color: "#32867d",
     marginTop:RFValue(10)
-  }
+  },
+  scrollview:{
+    flex: 1,
+    backgroundColor: "#fff"
+  },
+  signupView:{
+    flex:0.05,
+    justifyContent:'center',
+    alignItems:'center'
+},
+signupText:{
+  fontSize:RFValue(20),
+  fontWeight:"bold",
+  color:"#32867d"
+},
+santaView:{
+  flex:0.85,
+  justifyContent:"center",
+  alignItems:"center",
+  padding:RFValue(10)
+},
+santaImage:{
+  width:"70%",
+  height:"100%",
+  resizeMode:"stretch"
+},
+TextInput:{
+  flex:0.5,
+  alignItems:"center",
+  justifyContent:"center"
+},
+bookImage:{
+  width:"100%",
+  height:RFValue(220)
+}
 });

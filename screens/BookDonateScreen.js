@@ -77,7 +77,7 @@ export default class BookDonateScreen extends Component {
 
   render() {
     return (
-      <View style={{ flex: 1, backgroundColor: "#fff" }}>
+      <View style={styles.view}>
         <MyHeader title="Donate Books" navigation={this.props.navigation} />
         <View style={{ flex: 1 }}>
           {this.state.requestedBooksList.length === 0 ? (
@@ -116,4 +116,8 @@ const styles = StyleSheet.create({
       height: 8,
     },
   },
+  view:{
+    flex: 1,
+    backgroundColor: "#fff"
+  }
 });
